@@ -112,7 +112,7 @@ spec:
             app.kubernetes.io/managed-by: Helm
     spec:
       nodeSelector:
-        app: cis
+        app: kyverno
       containers:
       - name: kube-bench-adapter
         image: "ghcr.io/nirmata/kube-bench-adapter:v0.2.3"
@@ -194,7 +194,7 @@ spec:
                 app.kubernetes.io/managed-by: Helm
         spec:
           nodeSelector:
-            app: cis
+            app: kyverno
           containers:
           - name: kube-bench-adapter
             image: "ghcr.io/nirmata/kube-bench-adapter:v0.2.3"
@@ -261,7 +261,7 @@ metadata:
     "helm.sh/hook": test
 spec:
   nodeSelector:
-    app: cis
+    app: kyverno
   containers:
     - name: wget
       image: busybox
